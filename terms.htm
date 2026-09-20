@@ -2117,18 +2117,18 @@ $
         if (!countEl) return;
         var current = 0;
         var target = 100;
-        var duration = 3800; // ms
+        var duration = 4840; // ms
         var startTime = null;
 
-        function easeOutCubic(t) {
-          return 1 - Math.pow(1 - t, 3);
+        function linear(t) {
+          return t;
         }
 
         function animateCount(timestamp) {
           if (!startTime) startTime = timestamp;
           var elapsed = timestamp - startTime;
           var progress = Math.min(elapsed / duration, 1);
-          var eased = easeOutCubic(progress);
+          var eased = linear(progress);
           var value = Math.round(1 + eased * (target - 1));
           countEl.textContent = value;
           if (progress < 1) {
