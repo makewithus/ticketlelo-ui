@@ -5083,7 +5083,7 @@ ol {
   .content.bg-pinkk {
     background-image: url(../689c78ed63d36b6c2bdeb9d0_img.webp);
     flex: 0 auto;
-    height: 21.75rem;
+    display: none;
   }
   .flex-h-4 {
     flex-direction: column;
